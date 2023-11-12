@@ -47,6 +47,8 @@ public class Overseer extends JPanel implements KeyListener {
         requestFocus();
     }
 
+    // will not change it
+    // control hero movement left and right
     public void move(){ // takes in keyboard input and moves user cannon
         if (keys[KeyEvent.VK_RIGHT] && (ship.getPos() + 5) <= 740) {
             ship.right();
@@ -58,6 +60,7 @@ public class Overseer extends JPanel implements KeyListener {
             // canShoot flag prevents user from shooting infinite bullets one after another
             shotsFired.setPlayerShot(new Bullet(ship.getPos(), 556, Bullet.UP));
 
+            /*
             // play music
             try {
                 SoundMan.play("playerShoot");
@@ -68,6 +71,8 @@ public class Overseer extends JPanel implements KeyListener {
             } catch (LineUnavailableException e) {
                 e.printStackTrace();
             }
+
+             */
         }
     }
 

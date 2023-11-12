@@ -81,9 +81,12 @@ public class AlienMan {
                             beatModifier = Math.max(1, beatModifier - 1); // make aliens move faster
                             noEnemies -= 1;
 
+                            System.out.println("Alien shot");
+                            /*
                             // play music
                             try {
-                                SoundMan.play("alienShot");
+                                // SoundMan.play("alienShot");
+
                             } catch (UnsupportedAudioFileException e) {
                                 e.printStackTrace();
                             } catch (IOException e) {
@@ -91,7 +94,7 @@ public class AlienMan {
                             } catch (LineUnavailableException e) {
                                 e.printStackTrace();
                             }
-
+                            */
                             break;
                         }
                     }
@@ -117,6 +120,7 @@ public class AlienMan {
         if (coin.nextInt(5000) == 0 && ufo == null){ // generate new UFO
             ufo = new Enemy(4,770,45);
 
+            /*
             // play music
             try {
                 ufoMusic = SoundMan.play("ufo");
@@ -128,6 +132,8 @@ public class AlienMan {
             } catch (LineUnavailableException e) {
                 e.printStackTrace();
             }
+            */
+
         }
         if (ufo != null && beatCount%2==0){ // move UFO
             ufo.smoothLeft();
@@ -247,6 +253,7 @@ public class AlienMan {
             beat = 1 - beat; // flips between 1 and 0
             beatCount = 0;
 
+            /*
             // play music
             try {
                 SoundMan.play(Integer.toString(musicCount));
@@ -257,6 +264,7 @@ public class AlienMan {
             } catch (LineUnavailableException e) {
                 e.printStackTrace();
             }
+            */
 
             musicCount += 1;
             if (musicCount > 4){

@@ -30,12 +30,12 @@ public class Cannon{
 
     // these two functions move user left or right by 5 units
     public void right(){
-        pos += 5;
+        pos += 10;
         updateRect();
     }
 
     public void left(){
-        pos -= 5;
+        pos -= 10;
         updateRect();
     }
 
@@ -71,6 +71,7 @@ public class Cannon{
             lives -= 1;
             if (lives < 0) lives = 0; // prevents # of lives from becoming negative
 
+            /*
             // play music
             try {
                 hitMusic = SoundMan.play("playerDown");
@@ -81,6 +82,7 @@ public class Cannon{
             } catch (LineUnavailableException e) {
                 e.printStackTrace();
             }
+             */
         }
     }
 

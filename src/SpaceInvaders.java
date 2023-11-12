@@ -52,7 +52,7 @@ public class SpaceInvaders extends JFrame implements ActionListener{
     private int wave = 0; // # of wins by the user, keeps track of subsequent alien start location
     
     public SpaceInvaders() throws IOException, FontFormatException{
-        super("Space Invaders Recreated");
+        super("SAFCSP Game Project - Java Swing GUI");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         setLayout(null);
